@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
+*{
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+body{
+    background-image: linear-gradient(to right, #01022d , #000);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-image: 
+    linear-gradient(to right, #01022dd2 , #000000a1),
+    url(../Images/re.jpg)
+    ;
+    width: 93%;
+    height: 640px;
+}
+.container:hover{
+    background-image: 
+    linear-gradient(to right, #01022dd2 , #00000071, transparent),
+    url(../Images/re.jpg)
+    ;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.logo{
+    font-size: 35px;
+}
+ul{
+    width: 60%;
+    list-style:none;
+    display: flex;
+    justify-content: space-evenly;
+}
+ul a{
+    border-bottom: 2px solid transparent;
+}
+ul a:hover{
+    border-bottom-color: red ;
+}
+.content{
+    color: white;
+    width: 50%;
+    margin-top: 50px;
+    padding: 30px;
+}
+.content h2{
+    font-size: 55px;
+    text-transform: uppercase;
+}
+.content p{
+    letter-spacing: 3px;
+    width: 1000px;
+    padding: 20px 0;
+}
+.content button{
+    font-size: 20px;
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    cursor: pointer;
+
+}
+.content button:hover{
+    background-color: transparent;
+    border-color: white;
+    color: white;
+
+}
+footer{
+    background-color: #111;
+}
+.footerContainer{
+    width: 100%;
+    padding: 20px 30px 70px;
+}
+.socailicons{
+    display: flex;
+    justify-content: center;
+}
+.socailicons a{
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 40%;
+}
+.socailicons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+.footerNav{
+    margin: 3px 0;
+}
+.footerNav ul{
+    display:flex;
+    justify-content: center;
+}
+.footerNav ul a{
+    color: black;
+    margin: 20px;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.footerNav ul a{
+    opacity: 1;
+}
+.footerBottom{
+    padding: 3px;
+    text-align: center;
+    
+
+}
+
+
+
+
