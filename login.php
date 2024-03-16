@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="styles/login.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Poppins:ital,wght@0,300;0,400;0,500;1,400&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Poppins:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css" rel="stylesheet" />
 </head>
 
@@ -31,33 +29,31 @@
             </form>
             <section id="register-and-social-media">
                 <div>
-                    <span>Dont Have an Account? </span><a href="register.html"> Register</a>
+                    <span>Dont Have an Account? </span><a href="register.php"> Register</a>
                 </div>
             </section>
-           <?php
-if(isset($_POST['submit']) && $_POST['submit'] == 'Login') {
-    include 'connection.php';
+            <?php
+            if (isset($_POST['submit']) && $_POST['submit'] == 'Login') {
+                include 'connection.php';
 
-    $customer_Email = mysqli_real_escape_string($con, $_POST['User_Email']);
-    $customer_Password = mysqli_real_escape_string($con, $_POST['User_Password']);
+                $customer_Email = mysqli_real_escape_string($con, $_POST['User_Email']);
+                $customer_Password = mysqli_real_escape_string($con, $_POST['User_Password']);
 
-    $q1 = "SELECT * FROM `customer` WHERE `customer_Email` ='$customer_Email' AND `customer_password`='$customer_Password'";
-    $sql = mysqli_query($con, $q1);
+                $q1 = "SELECT * FROM `customer` WHERE `customer_Email` ='$customer_Email' AND `customer_password`='$customer_Password'";
+                $sql = mysqli_query($con, $q1);
 
-    if(mysqli_num_rows($sql) > 0) {
-        $row = mysqli_fetch_assoc($sql);
-        session_start();
-        $_SESSION['customer_id'] = $row['customer_id'];
-        echo "<script>alert('Logged in successfully'); window.location.href = 'index.html';</script>";;
-    } else {
-        echo "<script>alert('Invalid email or password. Please try again.');</script>";
-    }
-}
-?>
+                if (mysqli_num_rows($sql) > 0) {
+                    $row = mysqli_fetch_assoc($sql);
+                    session_start();
+                    $_SESSION['customer_id'] = $row['customer_id'];
+                    echo "<script>alert('Logged in successfully'); window.location.href = 'index.html';</script>";;
+                } else {
+                    echo "<script>alert('Invalid email or password. Please try again.');</script>";
+                }
+            }
+            ?>
         </section>
-         &copy; 2024 islamic-clothes-shop<br/> 
     </main>
 </body>
 
 </html>
-< &copy; 2024 islamic-clothes-shop<br/>
