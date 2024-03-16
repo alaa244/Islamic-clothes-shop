@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 15, 2024 at 12:30 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Generation Time: Mar 16, 2024 at 09:18 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -42,6 +42,7 @@ CREATE TABLE `category` (
 CREATE TABLE `customer` (
   `customer_id` int(11) NOT NULL,
   `customer_name` varchar(30) DEFAULT NULL,
+  `customer_username` varchar(30) DEFAULT NULL,
   `customer_phone_number` int(11) DEFAULT NULL,
   `customer_Email` varchar(50) DEFAULT NULL,
   `customer_address` varchar(50) DEFAULT NULL,
