@@ -48,7 +48,7 @@ if(isset($_POST['submit']) && $_POST['submit'] == 'Login') {
         $row = mysqli_fetch_assoc($sql);
         session_start();
         $_SESSION['customer_id'] = $row['customer_id'];
-        echo "<script>alert('Logged in successfully');</script>";
+        echo "<script>alert('Logged in successfully'); window.location.href = 'index.html';</script>";;
     } else {
         echo "<script>alert('Invalid email or password. Please try again.');</script>";
     }
