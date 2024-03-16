@@ -34,26 +34,26 @@
                     <span>Dont Have an Account? </span><a href="register.html"> Register</a>
                 </div>
             </section>
-            <?php
-            if(isset($_POST['submit']) && $_POST['submit'] == 'Login') {
-                include 'connection.php';
+           <?php
+if(isset($_POST['submit']) && $_POST['submit'] == 'Login') {
+    include 'connection.php';
 
-                $User_Email = mysqli_real_escape_string($con, $_POST['User_Email']);
-                $User_Password = mysqli_real_escape_string($con, $_POST['User_Password']);
+    $customer_Email = mysqli_real_escape_string($con, $_POST['User_Email']);
+    $customer_Password = mysqli_real_escape_string($con, $_POST['User_Password']);
 
-                $q1 = "SELECT * FROM `user` WHERE `User_Email` ='$User_Email' AND `User_Password`='$User_Password'";
-                $sql = mysqli_query($con, $q1);
+    $q1 = "SELECT * FROM `customer` WHERE `customer_Email` ='$customer_Email' AND `customer_password`='$customer_Password'";
+    $sql = mysqli_query($con, $q1);
 
-                if(mysqli_num_rows($sql) > 0) {
-                    $row = mysqli_fetch_assoc($sql);
-                    session_start();
-                    $_SESSION['user_id'] = $row['User_ID'];
-                    echo "<script>alert('Logged in successfully');</script>";
-                } else {
-                    echo "<script>alert('Invalid email or password. Please try again.');</script>";
-                }
-            }
-            ?>
+    if(mysqli_num_rows($sql) > 0) {
+        $row = mysqli_fetch_assoc($sql);
+        session_start();
+        $_SESSION['customer_id'] = $row['customer_id'];
+        echo "<script>alert('Logged in successfully');</script>";
+    } else {
+        echo "<script>alert('Invalid email or password. Please try again.');</script>";
+    }
+}
+?>
         </section>
     </main>
 </body>
