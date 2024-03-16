@@ -55,7 +55,9 @@ if(isset($_POST['submit']) && $_POST['submit'] == 'Login') {
 }
 ?>
         </section>
+         &copy; 2024 islamic-clothes-shop<br/> 
     </main>
 </body>
 
 </html>
+< &copy; 2024 islamic-clothes-shop<br/>
